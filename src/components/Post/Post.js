@@ -1,21 +1,28 @@
 import React from 'react';
 import './Post.css';
 import postImage from '../../images/postImage.jpg'
+import { Link } from 'react-router-dom';
 
-const Post = () => {
+const Post = ({ post }) => {
     return (
         <div className="post">
-            <img className="postImage" src={postImage} alt="" />
+            {post.photo && (
+                <img className="postImage" src={post.photo} alt="" />
+            )}
+
             <div className="postInfo">
                 <div className="postCategories">
-                    <span className="postCategory">Music</span>
-                    <span className="postCategory">Life</span>
+                    {post.categories.map(category => (
+                        <span className="postCategory">{category.name}</span>
+                    ))}
                 </div>
-                <span className="postTitle">Lorem ipsum dolor sit amet</span>
+                <Link to={`/post/${post._id}`} className="link">
+                    <span className="postTitle">{post.title}</span>
+                </Link>
                 <hr />
-                <span className="postDate">2 hours ago</span>
+                <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
             </div>
-            <p className="postDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi vero eveniet autem cumque ipsum facilis qui voluptatibus dignissimos cupiditate, iste, rerum molestiae alias eos consequatur. Vitae doloribus magnam tempore cupiditate vel harum unde, veritatis ducimus sunt velit soluta! Sunt ipsum molestiae explicabo voluptatem optio cupiditate magni voluptate necessitatibus. Possimus assumenda quos, eveniet, id facere quisquam aliquid et consequatur quaerat fuga labore. Eaque est sapiente, quae reiciendis consequatur nam modi, iure dolore autem consectetur tenetur? Repellendus modi nostrum tenetur voluptate.</p>
+            <p className="postDescription">{post.description}</p>
         </div>
     );
 };
