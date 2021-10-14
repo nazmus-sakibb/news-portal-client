@@ -45,6 +45,10 @@
     background-color: #0530db;
 }
 
+.loginButton:disabled {
+    cursor: not-allowed;
+}
+
 .loginRegisterButton {
     color: white;
     background-color: #142C8E;

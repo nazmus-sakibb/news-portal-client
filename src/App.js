@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { useContext } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,9 +13,11 @@ import Settings from './pages/Settings/Settings';
 import Write from './pages/Write/Write';
 import Single from './pages/Single/Single';
 import Home from './pages/Home/Home';
+import { Context } from './context/Context';
 
 function App() {
-  const user = false;
+  const {user} = useContext(Context);
+  
   return (
     <Router>
       <Topbar />

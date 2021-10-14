@@ -7,16 +7,24 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios('/auth', {
-            username,
-            email,
-            password
-        });
-        console.log(res);
+        setError(false);
+        try {
+            const res = await axios.post('/auth/register', {
+                username,
+                email,
+                password
+            });
+            res.data && window.location.replace('/login');
+        } catch (err) {
+            setError(true);
+        }
     }
+
+
     return (
         <div className="register">
             <span className="registerTitle">Register</span>
@@ -28,6 +36,7 @@ const Register = () => {
                 <label htmlFor="password">Password</label>
                 <input className="registerInput" type="password" placeholder="Enter your password..." id="password" onChange={e => setPassword(e.target.value)} />
                 <button className="registerButton" type="submit">Register</button>
+                {error && <p style={{textAlign: 'center', fontWeight: 'bold  '}}>Something went wrong!</p>}
             </form>
             <Link to="/login" className="link registerLoginButton">Login</Link>
         </div>
