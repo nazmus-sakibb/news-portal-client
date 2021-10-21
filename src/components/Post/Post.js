@@ -4,10 +4,11 @@ import postImage from '../../images/postImage.jpg'
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
+    const PF = "http://localhost:5000/images/";
     return (
         <div className="post">
             {post.photo && (
-                <img className="postImage" src={post.photo} alt="" />
+                <img className="postImage" src={PF + post.photo} alt="" />
             )}
 
             <div className="postInfo">
