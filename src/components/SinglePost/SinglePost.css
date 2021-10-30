@@ -13,6 +13,8 @@
 
 .singlePostWrapper {
     padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -21,6 +23,19 @@
     margin: 10px;
     font-family: 'Lora', serif;
     font-size: 30px;
+}
+
+.singlePostTitleInput {
+    text-align: center;
+    margin: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    border: none;
+    font-weight: 700;
+}
+
+.singlePostTitleInput:focus {
+    /* outline: none; */
 }
 
 
@@ -62,4 +77,32 @@
     font-size: 30px;
     font-weight: 700;
     font-style: italic;
+}
+
+.singlePostDescriptionInput {
+    border: none;
+    color: #2d3436;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.singlePostDescriptionInput:focus {
+    outline: none;
+}
+
+.singlePostButton {
+    color: white;
+    background-color: #142C8E;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+    
+.singlePostButton:hover {
+    background-color: #0530db;
 }
