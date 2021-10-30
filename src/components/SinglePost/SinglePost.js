@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './SinglePost.css';
 import postImage from '../../images/postImage.jpg';
 import { useLocation } from 'react-router';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/Context';
 
 const SinglePost = () => {
     const location = useLocation();
     const path = location.pathname.split('/')[2];
     const [post, setPost] = useState({});
     const PF = "http://localhost:5000/images/";
+    const { user } = useContext(Context);
 
     useEffect(() => {
         const getPost = async () => {
@@ -18,7 +20,17 @@ const SinglePost = () => {
             setPost(res.data);
         };
         getPost();
-    }, [path])
+    }, [path]);
+
+    const handleDelete = async () => {
+        try {
+            await axios.delete(`/posts/${post._id}`, {
+                data: { username: user.username }
+            });
+            window.location.raplace("/");
+        } catch (err) { }
+    };
+
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
@@ -27,10 +39,12 @@ const SinglePost = () => {
                 )}
 
                 <h1 className="singlePostTitle">{post.title}
-                    <div className="singlePostEdit">
-                        <i className="singlePostIcon editIcon far fa-edit"></i>
-                        <i className="singlePostIcon deleteIcon far fa-trash-alt"></i>
-                    </div>
+                    {post.username === user?.username &&
+                        <div className="singlePostEdit">
+                            <i className="singlePostIcon editIcon far fa-edit"></i>
+                            <i className="singlePostIcon deleteIcon far fa-trash-alt" onClick={handleDelete}></i>
+                        </div>
+                    }
                 </h1>
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">Author:
