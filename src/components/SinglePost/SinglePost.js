@@ -44,7 +44,6 @@ const SinglePost = () => {
                 title,
                 description
             });
-            // window.location.reload();
             setUpdateMode(false);
         } catch (err) { }
     }

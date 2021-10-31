@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
 import './Write.css';
-import postImage from '../../images/postImage.jpg';
 import axios from 'axios';
 import { Context } from '../../context/Context'
 
@@ -9,6 +8,7 @@ const Write = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [file, setFile] = useState(null);
+
     const { user } = useContext(Context);
 
     const handleSubmit = async (e) => {
@@ -26,15 +26,13 @@ const Write = () => {
             newPost.photo = filename;
             try {
                 await axios.post("/upload", data);
-            } catch (err) {
-
-            }
+            } catch (err) {}
         }
         try {
             const res = await axios.post("/posts", newPost);
             window.location.raplace("/post" + res.data._id);
         } catch (err) {}
-    }
+    };
 
     return (
         <div className="write">
