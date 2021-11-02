@@ -5,7 +5,8 @@ import { Context } from '../../context/Context';
 import axios from 'axios';
 
 const Settings = () => {
-    const { user } = useContext(Context);
+    const { user, dispatch } = useContext(Context);
+    const PF = "http://localhost:5000/images/";
 
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState("");
@@ -16,6 +17,7 @@ const Settings = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        dispatch({ type: "UPDATE_STARTER" });
         const updatedUser = {
             userId: user._id,
             username,
@@ -33,9 +35,12 @@ const Settings = () => {
             } catch (err) { }
         }
         try {
-            await axios.put("/users/" + user._id, updatedUser);
-            setSuccess(true); 
-        } catch (err) { }
+            const res = await axios.put("/users/" + user._id, updatedUser);
+            setSuccess(true);
+            dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
+        } catch (err) {
+            dispatch({ type: "UPDATE_FAILURE" });
+        }
     }
     return (
         <div className="settings">
@@ -47,7 +52,7 @@ const Settings = () => {
                 <form className="settingsForm" onSubmit={handleSubmit}>
                     <label>Profile Picture</label>
                     <div className="settingsProfilePicture">
-                        <img src={user.profilePic} alt="" />
+                        <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" />
                         <label htmlFor="fileInput"><i className="settingsPPIcon fas fa-user-circle"></i></label>
                         <input type="file" id="fileInput" style={{ display: 'none' }} onChange={(e) => setFile(e.target.files[0])} />
                     </div>
@@ -58,7 +63,7 @@ const Settings = () => {
                     <label>Password</label>
                     <input type="password" onChange={(e) => setPassword(e.target.value)} />
                     <button className="settingsSubmitButton" type="submit">Update</button>
-                    {success && <span style={{color: 'green', textAlign: 'center', marginTop: '20px'}}>Profile has been updated...</span>}
+                    {success && <span style={{ color: 'green', textAlign: 'center', marginTop: '20px' }}>Profile has been updated...</span>}
                 </form>
             </div>
             <Sidebar />
