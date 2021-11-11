@@ -14,10 +14,11 @@ import Write from './pages/Write/Write';
 import Single from './pages/Single/Single';
 import Home from './pages/Home/Home';
 import { Context } from './context/Context';
+import Footer from './components/Footer/Footer';
 
 function App() {
-  const {user} = useContext(Context);
-  
+  const { user } = useContext(Context);
+
   return (
     <Router>
       <Topbar />
@@ -41,6 +42,7 @@ function App() {
           <Single />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

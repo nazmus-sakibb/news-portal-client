@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
-import './Topbar.css';
+import './Topbar.css';                              
 
 const Topbar = () => {
     const { user, dispatch } = useContext(Context);
@@ -14,10 +14,10 @@ const Topbar = () => {
     return (
         <div className="topbar">
             <div className="topLeft">
-                <i className="socialIcon fab fa-facebook-square"></i>
-                <i className="socialIcon fab fa-twitter-square"></i>
-                <i className="socialIcon fab fa-pinterest-square"></i>
-                <i className="socialIcon fab fa-instagram-square"></i>
+                <i className="icon fab fa-facebook-square"></i>
+                <i className="icon fab fa-twitter-square"></i>
+                <i className="icon fab fa-pinterest-square"></i>
+                <i className="icon fab fa-instagram-square"></i>
             </div>
             <div className="topCenter">
                 <ul className="topList">
