@@ -14,10 +14,7 @@ const Topbar = () => {
     return (
         <div className="topbar">
             <div className="topLeft">
-                <i className="icon fab fa-facebook-square"></i>
-                <i className="icon fab fa-twitter-square"></i>
-                <i className="icon fab fa-pinterest-square"></i>
-                <i className="icon fab fa-instagram-square"></i>
+                <h2><Link to="/" className="link">NewsPortal</Link></h2>
             </div>
             <div className="topCenter">
                 <ul className="topList">
