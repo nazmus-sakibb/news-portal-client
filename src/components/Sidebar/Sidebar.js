@@ -35,11 +35,11 @@ const Sidebar = () => {
             </div>
             <div className="sidebarItem">
                 <span className="sidebarTitle">Follow Us</span>
-                <div className="sidebarSocial">
-                    <i className="sidebarIcon fab fa-facebook-square"></i>
-                    <i className="sidebarIcon fab fa-twitter-square"></i>
-                    <i className="sidebarIcon fab fa-pinterest-square"></i>
-                    <i className="sidebarIcon fab fa-instagram-square"></i>
+                <div className="sidebarIcon">
+                    <a href="https://www.facebook.com/"><i className="icon fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/"><i className="icon fab fa-twitter-square"></i></a>
+                    <a href="https://www.pinterest.com/"><i className="icon fab fa-pinterest-square"></i></a>
+                    <a href="https://www.instagram.com/"><i className="icon fab fa-instagram-square"></i></a>
                 </div>
             </div>
         </div>

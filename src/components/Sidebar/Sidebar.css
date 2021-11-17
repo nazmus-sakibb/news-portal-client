@@ -59,17 +59,11 @@
 }
 
 
-.sidebarSocial {
-    margin-top: 15px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sidebarIcon > a > .icon {
+    color: black;
+    margin: 0 10px;
 }
 
-
-.sidebarIcon {
-    font-size: 16px;
-    margin: 0 5px 5px;
-    cursor: pointer;
+.sidebarIcon > a > .icon:hover {
+    color: #34495e;
 }
