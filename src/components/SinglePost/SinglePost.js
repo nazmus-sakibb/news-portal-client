@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './SinglePost.css';
-import postImage from '../../images/postImage.jpg';
 import { useLocation } from 'react-router';
 import axios from 'axios';
 import { Link } from 'react-router-dom';

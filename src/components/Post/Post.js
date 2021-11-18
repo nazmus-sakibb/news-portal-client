@@ -1,6 +1,5 @@
 import React from 'react';
 import './Post.css';
-import postImage from '../../images/postImage.jpg'
 import { Link } from 'react-router-dom';
 
 const Post = ({ post }) => {
