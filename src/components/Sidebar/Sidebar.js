@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './Sidebar.css';
 import about from '../../images/about.jpg';
 import { useEffect } from 'react/cjs/react.development';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { axiosInstance } from '../../config';
 
 const Sidebar = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         const getCategories = async () => {
-            const res = await axios.get('/categories');
+            const res = await axiosInstance.get('/categories');
             setCategories(res.data);
         };
         getCategories();

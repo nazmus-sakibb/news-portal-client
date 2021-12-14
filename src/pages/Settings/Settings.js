@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import './Settings.css';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import { axiosInstance } from '../../config';
 import { Context } from '../../context/Context';
-import axios from 'axios';
+import './Settings.css';
 
 const Settings = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://news-portal2.herokuapp.com/images/";
 
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState("");
@@ -31,11 +31,11 @@ const Settings = () => {
             data.append("file", file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post("/upload", data);
+                await axiosInstance.post("/upload", data);
             } catch (err) { }
         }
         try {
-            const res = await axios.put("/users/" + user._id, updatedUser);
+            const res = await axiosInstance.put("/users/" + user._id, updatedUser);
             setSuccess(true);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         } catch (err) {

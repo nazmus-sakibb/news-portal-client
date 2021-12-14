@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
-import './Topbar.css';                              
+import './Topbar.css';
 
 const Topbar = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://news-portal2.herokuapp.com/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });

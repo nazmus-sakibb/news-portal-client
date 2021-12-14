@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
-import './SinglePost.css';
-import { useLocation } from 'react-router';
 import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
+import './SinglePost.css';
 
 const SinglePost = () => {
     const location = useLocation();
     const path = location.pathname.split('/')[2];
     const [post, setPost] = useState({});
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://news-portal2.herokuapp.com/images/";
     const { user } = useContext(Context);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
