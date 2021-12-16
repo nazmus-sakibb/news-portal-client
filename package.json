@@ -1,6 +1,5 @@
 {
   "name": "news-portal",
-  "homepage": "https://zen-edison-33bda8.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
