@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# News Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- This project was bootstrapped with React router. MongoDB is used for database and Heroku is used for server site code and client site is deployed in the Firebase. This is a plumber service project. Anyone can book one service at a time after google login and pay with stripe, and see all the bookings in the booking list section. An admin can manage order and also make new admin in the admin palen area. This is the client site code ropository.
+You can visit that site from here... [PlumberGuru](https://plumber-guru.web.app/). -->
 
-## Available Scripts
+A MERN-Stack web app with dashboard where people can pick a service at a time and fix a plumbing booking by payment with credit card or Stripe. An admin can review his booking and manage orders from his dashboard.
 
-In the project directory, you can run:
+[Live Website](https://news-portal1.netlify.app/) | [Live API Server](https://news-portal2.herokuapp.com/) 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Features
+- Firebase authentication system for login with google
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Online booking
 
-### `npm test`
+- Payment system with Credit card or Stripe
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Users dashboard
 
-### `npm run build`
+- Admins dashboard
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add new service for customers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Customers can give review
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### Front-End Thechnology :
+- JavaScript
+- React.js
+- Bootstrap5
+- HTML5
+- CSS3
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Back-end Technology
+- Node.js
+- Express.js
+- MongoDB
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Back-End Repository](https://github.com/nazmus-sakibb/news-portal-server)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
