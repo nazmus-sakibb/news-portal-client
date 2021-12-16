@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="footer">
             <div className="footerContainer">
                 <div className="footerLeft">
-                    <p>© Copyright 2021. All rights reserved || Designed by <a href="https://nazmus-sakibb.netlify.app/" className="link" style={{ fontWeight: 'bold' }}>Nazmus Sakib</a>.</p>
+                    <p>© Copyright 2021. All rights reserved || Designed & Developed by <a href="https://nazmus-sakibb.netlify.app/" className="link" style={{ fontWeight: 'bold' }}>Nazmus Sakib</a>.</p>
                 </div>
                 <div className="footerRight">
                     <a href="https://www.facebook.com/"><i className="icon fab fa-facebook-square"></i></a>
