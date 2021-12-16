@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useContext } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <Topbar />
-      {/* <Switch> */}
+      <Switch>
         <Route exact path="/">
           <Home />
         </Route>
@@ -41,7 +41,7 @@ function App() {
         <Route path="/post/:postId">
           <Single />
         </Route>
-      {/* </Switch> */}
+      </Switch>
       <Footer />
     </Router>
   );
