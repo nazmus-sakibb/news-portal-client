@@ -9,7 +9,7 @@ const SinglePost = () => {
     const location = useLocation();
     const path = location.pathname.split('/')[2];
     const [post, setPost] = useState({});
-    const PF = "https://news-portal2.herokuapp.com/images/";
+    const PF = "https://news-portal-server-azure.vercel.app/images/";
     const { user } = useContext(Context);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");

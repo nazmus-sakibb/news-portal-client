@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Post.css';
 
 const Post = ({ post }) => {
-    const PF = "https://news-portal2.herokuapp.com/images/";
+    const PF = "https://news-portal-server-azure.vercel.app/images/";
     return (
         <div className="post">
             {

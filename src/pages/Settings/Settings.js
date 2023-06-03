@@ -6,7 +6,7 @@ import './Settings.css';
 
 const Settings = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "https://news-portal2.herokuapp.com/images/";
+    const PF = "https://news-portal-server-azure.vercel.app/images/";
 
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState("");
