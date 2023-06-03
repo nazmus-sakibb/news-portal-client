@@ -2,7 +2,7 @@
 
 A MERN-Stack web app with a registration page where people can register their user profile if they are not already a user. And if they have already a user profile then can log in to their account via the login page. Here a user can post something and update their post and also delete post from the page named 'write' and can see other user's posts. Also a user can update his/her profile details from the settings page.
 
-[Live Website](https://news-portal1.netlify.app/) | [Live API Server](https://news-portal-server-azure.vercel.app/)
+[Live Website](https://news-portal1.netlify.app/) | [Live API Server](https://news-portal-server-nazmus-sakibb.vercel.app/)
 
 #### Features
 
