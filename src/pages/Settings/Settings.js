@@ -6,7 +6,7 @@ import './Settings.css';
 
 const Settings = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://news-portal-server-nazmus-sakibb.vercel.app/images/";
 
     const [file, setFile] = useState(null);
     const [username, setUsername] = useState("");

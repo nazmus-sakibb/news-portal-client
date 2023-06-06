@@ -5,7 +5,7 @@ import './Topbar.css';
 
 const Topbar = () => {
     const { user, dispatch } = useContext(Context);
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://news-portal-server-nazmus-sakibb.vercel.app/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
